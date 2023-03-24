@@ -9,8 +9,7 @@ import Dashboard  from "scenes/dashboard";
 import Products from 'scenes/products'
 import Customers from 'scenes/customers'
 import Transactions from 'scenes/Transactions'
-
-
+import Geography from 'scenes/geography'
 
 function App() {
 const mode = useSelector((state)=> state.global.mode)
@@ -27,6 +26,7 @@ const theme = useMemo(()=> createTheme(themeSettings(mode)),[mode]);
             <Route path="/products" element={<Products/>}/>
             <Route path="/customers" element={<Customers/>}/>
             <Route path="/transactions" element={<Transactions/>}/>
+            <Route path="/geography" element={<Geography/>}/>
           </Route>
         </Routes>
       </ThemeProvider>
